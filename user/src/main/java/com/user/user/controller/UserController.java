@@ -2,6 +2,7 @@ package com.user.user.controller;
 
 import com.user.user.dto.UserDto;
 import com.user.user.entity.User;
+import com.user.user.exception.NotFoundException;
 import com.user.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<Optional<UserDto>> getUserById(Long id) {
+    public ResponseEntity<Optional<UserDto>> getUserById(Long id) throws NotFoundException {
         return ResponseEntity.ok(userService.findById(id));
     }
 }

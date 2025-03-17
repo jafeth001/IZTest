@@ -14,9 +14,9 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("My Spring Boot API")
+                        .title("User Api")
                         .version("1.0")
-                        .description("API documentation for my Spring Boot application")
+                        .description("API documentation for User application")
                         .contact(new Contact()
                                 .name("Jafeth Adet")
                                 .email("jafethadet@gmail.com"))
